@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "asteroid-tracker"
+version = "0.1.0"
+description = "A FastAPI implementation to fetch potentially dangerous NEOs"
+authors = ["Avnish Aryan Jha <avnishjha1005@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.103.1"
+uvicorn = "^0.23.2"
+httpx = "^0.24.1"
+python-dotenv = "^1.0.0"
+redis = {extras = ["hiredis"], version = "^5.0.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
