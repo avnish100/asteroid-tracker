@@ -21,7 +21,7 @@ redis = redis.Redis(connection_pool=pool)
 # Define a function to retrieve cached data or fetch it if not cached
 async def get_cached_or_fetch_data(endpoint_key,
                                    fetch_function,
-                                   cache_duration=30):  # 6 hours
+                                   cache_duration=21600):  # 6 hours
     cached_data = redis.get(endpoint_key)
 
     if cached_data is not None:
